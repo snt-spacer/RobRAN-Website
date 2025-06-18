@@ -29,6 +29,14 @@ NavBench is a **multi-domain reinforcement learning benchmark** designed for rob
 
 ![Overview](media/navbench_overview.png)
 
+🎥 Real-world deployments
+-
+
+| Turtlebot 2              | Kingfisher            | Floating platform                 |
+| :---------------- | :--------------: | :-------------------: |
+| <div align="center"><img src="media/sim2realturtlebot.gif" width="80%"></div>            |   <div align="center"><img src="media/sim2realkingfish.gif" width="80%"></div>     |   <div align="center"><img src="media/sim2realFP.gif" width="80%"></div>    |
+
+
 Features
 -
 - **Diverse Navigation Tasks**: `GoToPosition`, `GoToPose`, `GoThroughPositions`, `TrackVelocities`, and more.
@@ -144,11 +152,3 @@ You can download all the trained models from this [link](/models/).
 | Turtlebot 2              | Kingfisher            | Floating platform                 |
 | :---------------- | :--------------: | :-------------------: |
 | <div align="center"><img src="media/Turtlebot_GoToPosition_plots.png" width="80%"></div>            |   <div align="center"><img src="media/Kingfisher_GoToPosition_plots.png" width="80%"></div>     |   <div align="center"><img src="media/FloatingPlatform_GoToPosition_plots.png" width="80%"></div>    |
-
-
-🎥 Real-world deployments
--
-
-| Turtlebot 2              | Kingfisher            | Floating platform                 |
-| :---------------- | :--------------: | :-------------------: |
-| <div align="center"><img src="media/sim2realturtlebot.gif" width="80%"></div>            |   <div align="center"><img src="media/sim2realkingfish.gif" width="80%"></div>     |   <div align="center"><img src="media/sim2realFP.gif" width="80%"></div>    |
