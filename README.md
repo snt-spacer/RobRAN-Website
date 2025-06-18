@@ -97,26 +97,36 @@ Play trained models
 Evaluation & Metrics
 ```
 ```
-<div align="center">
-  <img src="media/eval_metrics_per_task.png" width="80%">
-</div>
 
-Success Rate on multiple frameworks
-| Task |	Robot	| rl_games | skrl |
-| :---- | :------ | --------: | ----: |
-| GoThroughPositions |	FloatingPlatform	| 1.000 |	1.000 |
-| GoThroughPositions |	Kingfisher	| 0.994 |	1.000 |
-| GoThroughPositions |	Turtlebot2	| 1.000 |	1.000 |
-| GoToPose |	FloatingPlatform	| 1.000 |	0.999 |
-| GoToPose |	Kingfisher	| 0.827 |	0.898 |
-| GoToPose |	Turtlebot2	| 0.834 |	0.937 |
-| GoToPosition |	FloatingPlatform	| 0.997 |	1.000 |
-| GoToPosition |	Kingfisher	| 0.997 |	0.600 |
-| GoToPosition |	Turtlebot2	| 0.991 |	0.993 |
-| TrackVelocities |	FloatingPlatform	| 0.885 |	0.968 |
-| TrackVelocities |	Kingfisher	| 0.992 |	1.000 |
-| TrackVelocities |	Turtlebot2	| 0.999 |	1.000 |
-
+Performance Metrics across frameworks
+| Task | Robot | Success | Final Dist Err | Time to Target | Ctrl Var | Heading Err | Goals Reached |
+| :---- | :------ | :------: | :------: | :------: | :------: | :------: | :------: |
+| **GoThroughPositions** | | | | | | | |
+| | FloatingPlatform (skrl) | 1.000 | 2.346 | 65.180 | 0.318 | — | 13.565 |
+| | FloatingPlatform (rl_games) | 1.000 | 2.697 | 66.640 | 0.373 | — | 14.025 |
+| | Kingfisher (skrl) | 1.000 | 2.414 | 93.290 | 0.430 | — | 10.702 |
+| | Kingfisher (rl_games) | 1.000 | 3.525 | 67.050 | 0.092 | — | 14.716 |
+| | Turtlebot2 (skrl) | 1.000 | 1.789 | 101.500 | 0.133 | — | 11.006 |
+| | Turtlebot2 (rl_games) | 1.000 | 1.861 | 84.170 | 0.052 | — | 10.835 |
+| **GoToPosition** | | | | | | | |
+| | FloatingPlatform (skrl) | 0.994 | 0.050 | 92.380 | 0.620 | — | — |
+| | FloatingPlatform (rl_games) | 0.995 | 0.035 | 91.830 | 0.676 | — | — |
+| | Kingfisher (skrl) | 0.589 | 1.063 | 176.110 | 0.750 | — | — |
+| | Kingfisher (rl_games) | 0.998 | 0.023 | 90.040 | 0.112 | — | — |
+| | Turtlebot2 (skrl) | 0.986 | 0.069 | 92.600 | 0.433 | — | — |
+| | Turtlebot2 (rl_games) | 0.979 | 0.066 | 99.200 | 0.063 | — | — |
+| **GoToPose** | | | | | | | |
+| | FloatingPlatform (skrl) | 0.993 | 0.024 | 92.370 | 0.688 | 0.783 | — |
+| | FloatingPlatform (rl_games) | 0.979 | 0.035 | 88.710 | 0.754 | 0.801 | — |
+| | Turtlebot2 (skrl) | 0.836 | 0.145 | 131.490 | 0.629 | 4.389 | — |
+| | Turtlebot2 (rl_games) | 0.779 | 0.155 | 134.540 | 0.095 | 2.189 | — |
+| **TrackVelocities** | | | | | | | |
+| | FloatingPlatform (skrl) | 0.930 | — | — | 0.447 | — | 0.049 |
+| | FloatingPlatform (rl_games) | 0.679 | — | — | 0.388 | — | 0.044 |
+| | Kingfisher (skrl) | — | — | — | 0.618 | — | 0.241 |
+| | Kingfisher (rl_games) | 0.434 | — | — | 0.093 | — | 0.272 |
+| | Turtlebot2 (skrl) | 0.768 | — | — | 0.152 | — | 0.107 |
+| | Turtlebot2 (rl_games) | 0.783 | — | — | 0.025 | — | 0.100 |
 
 📊 Pre-trained models and performance metrics
 -
