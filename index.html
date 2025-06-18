@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta name="description" content="A Unified Robotics Benchmark for Reinforcement Learning-Based Autonomous Navigation">
+  <meta property="og:title" content="NavBench"/>
+  <meta property="og:description" content="A Unified Robotics Benchmark for Reinforcement Learning-Based Autonomous Navigation"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
   <meta property="og:image" content="static/image/your_banner_image.png" />
@@ -14,13 +14,13 @@
   <meta property="og:image:height" content="630"/>
 
 
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <meta name="twitter:title" content="NavBench">
+  <meta name="twitter:description" content="A Unified Robotics Benchmark for Reinforcement Learning-Based Autonomous Navigation">
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
   <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="A Unified Robotics Benchmark for Reinforcement Learning-Based Autonomous Navigation">
   <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="keywords" content="Robotics, Reinforcement Learning, Autonomous Navigation, Benchmark, Simulation, Real-World Transfer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
@@ -43,6 +43,24 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+  <style>
+    .modal-image {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .modal-image:hover {
+      transform: scale(1.02);
+    }
+    .modal-content {
+      max-width: 90vw;
+      max-height: 90vh;
+    }
+    .modal-content img {
+      max-width: 100%;
+      max-height: 90vh;
+      object-fit: contain;
+    }
+  </style>
 </head>
 <body>
 
@@ -81,7 +99,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2505.14526" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -91,7 +109,7 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -99,11 +117,11 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/snt-spacer/NavBench-Website" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -114,7 +132,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2505.14526" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -135,13 +153,14 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
+      <!-- Your video here -->
+      <!-- <video poster="" id="tree" autoplay controls muted loop height="100%">
         <source src="static/videos/banner_video.mp4"
         type="video/mp4">
-      </video>
+      </video> -->
+      <img src="media/navbench_overview.png" alt="navbench_overview"/>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        Our framework extends IsaacLab with a modular and scalable design, enabling unified definitions of tasks and robots, and training one policy per robot-task pair using a shared infrastructure. It uniquely supports sim-to-real transfer across diverse platforms and a cross-medium for evaluating navigation in varied environments.
       </h2>
     </div>
   </div>
@@ -156,7 +175,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          Autonomous robots must navigate and operate in diverse environments, from terrestrial and aquatic settings to aerial and space domains. While Reinforcement Learning (RL) has shown promise in training policies for specific autonomous robots, existing benchmarks are often constrained to unique platforms, limiting generalization and fair comparisons across different mobility systems. In this paper, we present NavBench, a multi-domain benchmark for training and evaluating RL-based navigation policies across diverse robotic platforms and operational environments. Built on IsaacLab, our framework standardizes task definitions, enabling different robots to tackle various navigation challenges without the need for ad-hoc task redesigns or custom evaluation metrics. Our benchmark addresses three key challenges: (1) Scalable and modular design, facilitating seamless robot-task interchangeability and reproducible training pipelines; (2) Robust sim-to-real validation, demonstrated through successful policy transfer to multiple real-world robots, including a satellite robotic simulator, an unmanned surface vessel, and a wheeled ground vehicle, and (3) Unified cross-medium benchmarking, enabling direct evaluation of diverse actuation methods (thrusters, wheels, water-based propulsion) in realistic environments. By ensuring consistency between simulation and real-world deployment, NavBench simplifies the development of adaptable RL-based navigation strategies. Its modular design allows researchers to easily integrate custom robots and tasks by following the framework’s predefined templates, making it accessible for a wide range of applications.  Our code is publicly available at <a href="https://anonymous.4open.science/r/NavBench-C20B">NavBench</a>.
+          Autonomous robots must navigate and operate in diverse environments, from terrestrial and aquatic settings to aerial and space domains. While Reinforcement Learning (RL) has shown promise in training policies for specific autonomous robots, existing benchmarks are often constrained to unique platforms, limiting generalization and fair comparisons across different mobility systems. In this paper, we present NavBench, a multi-domain benchmark for training and evaluating RL-based navigation policies across diverse robotic platforms and operational environments. Built on IsaacLab, our framework standardizes task definitions, enabling different robots to tackle various navigation challenges without the need for ad-hoc task redesigns or custom evaluation metrics. Our benchmark addresses three key challenges: (1) Scalable and modular design, facilitating seamless robot-task interchangeability and reproducible training pipelines; (2) Robust sim-to-real validation, demonstrated through successful policy transfer to multiple real-world robots, including a satellite robotic simulator, an unmanned surface vessel, and a wheeled ground vehicle, and (3) Unified cross-medium benchmarking, enabling direct evaluation of diverse actuation methods (thrusters, wheels, water-based propulsion) in realistic environments. By ensuring consistency between simulation and real-world deployment, NavBench simplifies the development of adaptable RL-based navigation strategies. Its modular design allows researchers to easily integrate custom robots and tasks by following the framework's predefined templates, making it accessible for a wide range of applications.  Our code is publicly available at <a href="https://anonymous.4open.science/r/NavBench-C20B">NavBench</a>.
           </p>
         </div>
       </div>
@@ -165,40 +184,138 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Key Features -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Key Features</h2>
+        <div class="content">
+          <div class="columns is-multiline">
+            <div class="column is-4">
+              <div class="box">
+                <h3 class="title is-4">Cross-Domain Evaluation</h3>
+                <p>Support for thruster-based platforms, wheeled robots, and water-based propulsion systems, enabling fair comparisons across different mobility systems.</p>
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="box">
+                <h3 class="title is-4">Unified Task Definitions</h3>
+                <p>Standardized observation space, reward structures, and evaluation metrics across all platforms and tasks.</p>
+              </div>
+            </div>
+            <div class="column is-4">
+              <div class="box">
+                <h3 class="title is-4">Real-World Validation</h3>
+                <p>Successfully deployed policies on multiple physical robots: Floating Platform, Kingfisher, and Turtlebot2.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Supported Robots and Tasks -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Supported Robots and Tasks</h2>
+        <div class="columns">
+          <div class="column">
+            <h3 class="title is-4">Robots</h3>
+            <div class="content">
+              <ul>
+                <li><strong>Land:</strong> Jetbot, Leatherback, Turtlebot2</li>
+                <li><strong>Water:</strong> Kingfisher</li>
+                <li><strong>Space:</strong> Floating Platform</li>
+              </ul>
+            </div>
+          </div>
+          <div class="column">
+            <h3 class="title is-4">Tasks</h3>
+            <div class="content">
+              <ul>
+                <li>GoToPosition</li>
+                <li>GoToPose</li>
+                <li>GoThroughPositions</li>
+                <li>TrackVelocities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Performance Results -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Performance Results</h2>
+        <div class="content">
+          <h3 class="title is-4 has-text-centered">Simulation Performance</h3>
+          <div class="has-text-centered">
+            <img src="media/performance_metrics_sim.png" alt="Performance metrics in simulation" style="max-width: 100%;" class="modal-image" onclick="openModal(this)">
+          </div>
+
+          <h3 class="title is-4 has-text-centered" style="margin-top: 2rem;">Real-World Performance</h3>
+          <div class="columns">
+            <div class="column">
+              <div class="has-text-centered">
+                <h4 class="title is-5">Turtlebot 2</h4>
+                <img src="media/Turtlebot_GoToPosition_plots.png" alt="Turtlebot 2 performance plots" style="max-width: 100%;" class="modal-image" onclick="openModal(this)">
+              </div>
+            </div>
+            <div class="column">
+              <div class="has-text-centered">
+                <h4 class="title is-5">Kingfisher</h4>
+                <img src="media/Kingfisher_GoToPosition_plots.png" alt="Kingfisher performance plots" style="max-width: 100%;" class="modal-image" onclick="openModal(this)">
+              </div>
+            </div>
+            <div class="column">
+              <div class="has-text-centered">
+                <h4 class="title is-5">Floating Platform</h4>
+                <img src="media/FloatingPlatform_GoToPosition_plots.png" alt="Floating Platform performance plots" style="max-width: 100%;" class="modal-image" onclick="openModal(this)">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Image carousel -->
 <section class="hero is-small">
   <div class="hero-body">
-    <div class="container">
+    <div class="container is-max-desktop">
       <div id="results-carousel" class="carousel results-carousel">
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+        <img src="media/sim2realturtlebot.gif" alt="MY ALT TEXT"/>
+        <!-- <h2 class="subtitle has-text-centered">
+          Turtlebot 2
+        </h2> -->
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
+        <img src="media/sim2realkingfish.gif" alt="MY ALT TEXT"/>
+        <!-- <h2 class="subtitle has-text-centered">
+          Kingfisher
+        </h2> -->
       </div>
       <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
+        <img src="media/sim2realFP.gif" alt="MY ALT TEXT"/>
+        <!-- <h2 class="subtitle has-text-centered">
+         Floating Platform
+       </h2> -->
      </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
   </div>
 </div>
 </div>
@@ -209,57 +326,52 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
       <h2 class="title is-3">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
           <div class="publication-video">
-            <!-- Youtube embed code here -->
             <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End youtube video -->
 
 
 <!-- Video carousel -->
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
+      <h2 class="title is-3">Sim2Real Highligts</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
+            <source src="media/sim2realFP.gif"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video2">
           <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
+            <source src="media/sim2realkingfish.gif"
             type="video/mp4">
           </video>
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
+            <source src="media/sim2realturtlebot.gif"
             type="video/mp4">
           </video>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End video carousel -->
 
 
@@ -268,7 +380,7 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -278,7 +390,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
@@ -286,7 +398,15 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre>
+        <code>
+@article{el2025navbench,
+  title={NavBench: A Unified Robotics Benchmark for Reinforcement Learning-Based Autonomous Navigation},
+  author={El-Hariry, Matteo and Richard, Antoine and Castan, Ricard M and Batista, Luis FW and Geist, Matthieu and Pradalier, Cedric and Olivares-Mendez, Miguel},
+  journal={arXiv preprint arXiv:2505.14526},
+  year={2025}
+}
+      </code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
@@ -299,9 +419,7 @@
         <div class="content">
 
           <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>
           </p>
 
         </div>
@@ -310,11 +428,37 @@
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+<!-- Modal for image zoom -->
+<div class="modal" id="imageModal">
+  <div class="modal-background" onclick="closeModal()"></div>
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="Zoomed image">
+  </div>
+  <button class="modal-close is-large" aria-label="close" onclick="closeModal()"></button>
+</div>
 
-    <!-- End of Statcounter Code -->
+<script>
+function openModal(img) {
+  const modal = document.getElementById('imageModal');
+  const modalImg = document.getElementById('modalImage');
+  modal.classList.add('is-active');
+  modalImg.src = img.src;
+  document.body.classList.add('is-clipped');
+}
+
+function closeModal() {
+  const modal = document.getElementById('imageModal');
+  modal.classList.remove('is-active');
+  document.body.classList.remove('is-clipped');
+}
+
+// Close modal with escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});
+</script>
 
   </body>
   </html>
