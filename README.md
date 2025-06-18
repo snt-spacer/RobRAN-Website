@@ -96,6 +96,7 @@ Play trained models
 ```
 Evaluation & Metrics
 ```
+./isaaclab.sh -p scripts/reinforcement_learning/run_all_evals.py
 ```
 
 Performance Metrics across frameworks
