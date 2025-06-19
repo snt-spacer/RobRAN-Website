@@ -27,7 +27,10 @@ NavBench is a **multi-domain reinforcement learning benchmark** designed for rob
 ✅ **Scalable training pipelines** for reinforcement learning agents
 ✅ **Sim-to-real transfer validation** on physical robots
 
-![Overview](media/navbench_overview.png)
+
+<div align="center">
+  <img src="media/navbench_overview.png" width="80%">
+</div>
 
 🎥 Real-world deployments
 -
@@ -79,7 +82,7 @@ Reproducibility
 > The paper was tested using SKRL and RL_Games for the `isaac_lab_rl_framework`.
 
 <div align="center">
-  <img src="media/rewards_ppo.png" width="80%">
+  <img src="media/rewards_ppo.png" width="60%">
 </div>
 
 ### PPO Hyperparameters
@@ -107,7 +110,10 @@ Evaluation & Metrics
 ./isaaclab.sh -p scripts/reinforcement_learning/run_all_evals.py
 ```
 
-Performance Metrics across frameworks
+### Performance Comparison Across RL Frameworks
+
+The table below summarizes the performance of policies trained with skrl and rl_games on shared navigation tasks. 
+
 | Task | Robot | Success | Final Dist Err | Time to Target | Ctrl Var | Heading Err | Goals Reached |
 | :---- | :------ | :------: | :------: | :------: | :------: | :------: | :------: |
 | **GoThroughPositions** | | | | | | | |
@@ -137,6 +143,8 @@ Performance Metrics across frameworks
 | | Turtlebot2 (skrl) | 0.768 | — | — | 0.152 | — | 0.107 |
 | | Turtlebot2 (rl_games) | 0.783 | — | — | 0.025 | — | 0.100 |
 
+This table compares performance across tasks using PPO from two RL libraries: skrl and rl_games. While both show strong convergence, some variations emerge—particularly in heading control and velocity tracking. These differences likely stem from implementation details (e.g., optimizer behavior, action noise, or learning rate schedules). Despite these, both frameworks achieve high success rates and consistent trends, confirming that the benchmark stack is stable and the results are reproducible across PPO variants.
+
 📊 Pre-trained models and performance metrics
 -
 You can download all the trained models from this [link](/models/).
@@ -144,7 +152,7 @@ You can download all the trained models from this [link](/models/).
 ### Simulation
 
 <div align="center">
-  <img src="media/performance_metrics_sim.png" width="100%">
+  <img src="media/performance_metrics_sim.png" width="80%">
 </div>
 
 ### Real-world
