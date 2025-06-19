@@ -1,4 +1,6 @@
-![Isaac Lab](media/nav_bench_banner.png)
+<div align="center">
+  <img src="media/nav_bench_banner.png" width="80%">
+</div>
 
 # NavBench Website
 *A Unified Robotics Benchmark for Reinforcement Learning-Based Autonomous Navigation.*
@@ -81,7 +83,7 @@ Reproducibility
 >[!Note]
 > The paper was tested using SKRL and RL_Games for the `isaac_lab_rl_framework`.
 
-<div align="center">
+<div align="left">
   <img src="media/rewards_ppo.png" width="40%">
 </div>
 
@@ -143,7 +145,7 @@ The table below summarizes the performance of policies trained with skrl and rl_
 | | Turtlebot2 (skrl) | 0.768 | — | — | 0.152 | — | 0.107 |
 | | Turtlebot2 (rl_games) | 0.783 | — | — | 0.025 | — | 0.100 |
 
-This table compares performance across tasks using PPO from two RL libraries: skrl and rl_games. While both show strong convergence, some variations emerge—particularly in heading control and velocity tracking. These differences likely stem from implementation details (e.g., optimizer behavior, action noise, or learning rate schedules). Despite these, both frameworks achieve high success rates and consistent trends, confirming that the benchmark stack is stable and the results are reproducible across PPO variants.
+This table compares performance across tasks using PPO from two RL libraries: skrl and rl_games. While both show strong convergence, some variations emerge, particularly in heading control and velocity tracking. These differences likely stem from implementation details (e.g., optimizer behavior, action noise, or learning rate schedules). Despite these, both frameworks achieve high success rates and consistent trends, confirming that the benchmark stack is stable and the results are reproducible across PPO variants.
 
 📊 Pre-trained models and performance metrics
 -
