@@ -82,7 +82,7 @@ Reproducibility
 > The paper was tested using SKRL and RL_Games for the `isaac_lab_rl_framework`.
 
 <div align="center">
-  <img src="media/rewards_ppo.png" width="60%">
+  <img src="media/rewards_ppo.png" width="40%">
 </div>
 
 ### PPO Hyperparameters
@@ -152,7 +152,7 @@ You can download all the trained models from this [link](/models/).
 ### Simulation
 
 <div align="center">
-  <img src="media/performance_metrics_sim.png" width="80%">
+  <img src="media/performance_metrics_sim.png" width="70%">
 </div>
 
 ### Real-world
