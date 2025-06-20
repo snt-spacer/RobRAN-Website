@@ -19,7 +19,7 @@
 This is a landing page for all the projects related to NavBench. Below there's the links to the code of each project:
 
 Main Code (RAL Submission)
-- [![Main Code](https://img.shields.io/badge/NavBench-Github-blue?logo=github)](https://anonymous.4open.science/r/NavBench-Code-E08E/README.md)
+- https://anonymous.4open.science/r/NavBench-Code-E08E/
 
 Overview
 -
