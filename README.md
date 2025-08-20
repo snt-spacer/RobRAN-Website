@@ -2,7 +2,7 @@
   <img src="media/nav_bench_banner.png" width="80%">
 </div>
 
-# NavBench Website
+# RobRAN Website
 *A Unified Robotics Benchmark for Reinforcement Learning-Based Autonomous Navigation.*
 
 [![IsaacSim](https://img.shields.io/badge/IsaacSim-4.5.0-silver.svg)](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html)
@@ -16,14 +16,14 @@
 <!-- [![Paper](https://img.shields.io/badge/Paper-arXiv-green)](INSERT_ARXIV_LINK)
 [![Website](https://img.shields.io/badge/Website-Project_Page-blue)](INSERT_WEBSITE_LINK)   -->
 
-This is a landing page for all the projects related to NavBench. Below there's the links to the code of each project:
+This is a landing page for all the projects related to RobRAN. Below there's the links to the code of each project:
 
 Main Code (RAL Submission)
-- https://anonymous.4open.science/r/NavBench-Code-E08E/
+- https://anonymous.4open.science/r/RobRAN-Code-E08E/
 
 Overview
 -
-NavBench is a **multi-domain reinforcement learning benchmark** designed for robotic navigation tasks in **terrestrial, aquatic, and space environments**. Built on [IsaacLab](https://isaac-sim.github.io/IsaacLab), our framework enables:
+RobRAN is a **multi-domain reinforcement learning benchmark** designed for robotic navigation tasks in **terrestrial, aquatic, and space environments**. Built on [IsaacLab](https://isaac-sim.github.io/IsaacLab), our framework enables:
 
 ✅ **Fair comparisons** across different robots and mobility systems
 ✅ **Scalable training pipelines** for reinforcement learning agents
@@ -55,8 +55,8 @@ Features
 -
 Code lives in this anonymous [repo](https://anonymous.4open.science/r/NavBench-Code-E08E/README.md):
 ```
-git clone https://anonymous.4open.science/r/NavBench-Code-E08E/README.md
-cd NavBench-Code
+git clone https://anonymous.4open.science/r/RobRAN-Code-E08E/README.md
+cd RobRAN-Code
 ./docker/container.py start
 ./docker/container.py enter
 ```
