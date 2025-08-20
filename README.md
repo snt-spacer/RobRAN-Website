@@ -3,7 +3,7 @@
 </div>
 
 # RobRAN Website
-*A Unified Robotics Benchmark for Reinforcement Learning-Based Autonomous Navigation.*
+*A Unified Robotics Framework for Reinforcement Learning-Based Autonomous Navigation.*
 
 [![IsaacSim](https://img.shields.io/badge/IsaacSim-4.5.0-silver.svg)](https://docs.isaacsim.omniverse.nvidia.com/latest/index.html)
 [![Python](https://img.shields.io/badge/python-3.10-blue.svg)](https://docs.python.org/3/whatsnew/3.10.html)
